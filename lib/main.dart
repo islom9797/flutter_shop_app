@@ -18,10 +18,11 @@ class MyApp extends StatelessWidget {
 
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainPage(),
+      home: IntroPage(),
       routes: {
         MainPage.id:(context)=>MainPage(),
         IntroPage.id:(context)=>IntroPage(),
+
 
 
       },
