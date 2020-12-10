@@ -94,6 +94,7 @@ class _HotelPageState extends State<HotelPage> {
                ],
              ),
            ),
+            SizedBox(height: 20,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
@@ -119,6 +120,7 @@ class _HotelPageState extends State<HotelPage> {
                 ],
               ),
             ),
+            SizedBox(height: 20,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
