@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: AmazonUi(),
+      home: HomePage(),
       routes: {
         MainPage.id:(context)=>MainPage(),
         IntroPage.id:(context)=>IntroPage(),

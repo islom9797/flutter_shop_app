@@ -9,7 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool _isLogin = true;
+  bool _isLogin = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +32,18 @@ class _HomePageState extends State<HomePage> {
             ]),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 100,
+              ),
               FadeAnimation(
-                  1,
+                  4,
                   Text(
                     "Find the best parties near you.",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.yellowAccent,
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                         height: 1.1),
@@ -53,12 +56,12 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     "Let us find you a party for your interest",
                     style: TextStyle(
-                        color: Colors.white.withOpacity(.99),
+                        color: Colors.greenAccent,
                         fontSize: 25,
-                        fontWeight: FontWeight.w100),
+                        fontWeight: FontWeight.w300),
                   )),
               SizedBox(
-                height: 150,
+                height: 350,
               ),
 
               _isLogin?
@@ -77,15 +80,38 @@ class _HomePageState extends State<HomePage> {
 
               Container(
                 height: 55,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Colors.red
+
+                child:Row(
+
+                  children: [
+                   Expanded(child:  Container(
+                     decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(50),
+                         color: Colors.red
+                     ),
+                     child:  Center(
+                         child: Text(
+                           "Google+",
+                           style: TextStyle(color: Colors.white, fontSize: 18),
+                         )),
+
+                   ),),
+                   SizedBox(width: 20,),
+                   Expanded(
+                     child:  Container(
+                     decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(50),
+                         color: Colors.blue
+                     ),
+                     child:  Center(
+                         child: Text(
+                           "Facebook",
+                           style: TextStyle(color: Colors.white, fontSize: 18),
+                         )),
+
+                   ),),
+                  ],
                 ),
-                child: Center(
-                    child: Text(
-                      "Google+",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
-                    )),
               ),
 
               SizedBox(
